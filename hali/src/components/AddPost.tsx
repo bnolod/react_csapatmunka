@@ -21,7 +21,7 @@ export const Addpost = () => {
         
         e.preventDefault();
         try {
-          const response = await fetch("/posts", {
+          const response = await fetch("http://localhost:3000/posts", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -30,7 +30,9 @@ export const Addpost = () => {
           });
     
           if (!response.ok) {
+            console.log(response)
             throw new Error("Hiba történt a bejegyzés létrehozása közben.");
+
           }
     
           const result = await response.json();
