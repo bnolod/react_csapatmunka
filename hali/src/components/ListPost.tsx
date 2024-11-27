@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Post } from "../interfaces/Post";
+import DeletePost from "./DeletePost";
 
 
 export const ListPost = () => {
@@ -24,7 +25,10 @@ export const ListPost = () => {
             <h1>Bejegyzések</h1>
             <ul>
                 {posts.map((post) => (
-                <li key={post._id}>{post.title}</li>
+                <li key={post._id}>{post.title}
+                <DeletePost id={post._id}/>
+                </li>
+                
                 ))}
             </ul>
         </div>

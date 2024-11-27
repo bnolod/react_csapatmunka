@@ -3,7 +3,6 @@ import { NavigationBar } from './NavigationBar';
 import { Home } from './components/Home';
 import { Addpost } from './components/AddPost';
 import { AscDescPost } from './components/AscDescPost';
-import { DeletePost } from './components/DeletePost';
 import { EditPost } from './components/EditPost';
 import { ListPost } from './components/ListPost';
 import { SearchPost } from './components/SearchPost';
@@ -19,7 +18,6 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/post-listazas" element={<ListPost />} />
                 <Route path="/post-hozzaadas" element={<Addpost />} />
-                <Route path="/post-torles" element={<DeletePost />} />
                 <Route path="/post-szerkesztes" element={<EditPost />} />
                 <Route path="/post-kereses" element={<SearchPost />} />
                 <Route path="/post-rendezes" element={<SortPost />} />
